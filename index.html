@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sales and Customer Analytics Dashboard</title>
+<style>
+:root{--bg:#FBF4F3;--surface:#FFFFFF;--ink:#2A1417;--muted:#6E4F53;--line:#EBD3D1;--accent:#B3262E;--on-accent:#FFFFFF;--soft:#F9E3E1}
+@media (prefers-color-scheme: dark){:root{--bg:#1B0F11;--surface:#26171A;--ink:#F6E8E7;--muted:#C9A9AC;--line:#43292D;--accent:#FF8A8F;--on-accent:#3A0B0E;--soft:#341D21;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;
+padding:24px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px))}
+main{max-width:920px;margin:0 auto;display:grid;gap:26px}
+h1{margin:0;font-size:clamp(1.7rem,6vw,2.5rem);line-height:1.15}
+h2{margin:0;font-size:1.25rem}
+.by{color:var(--muted);margin:6px 0 0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;gap:2px}
+.kpi span{color:var(--muted);font-size:.9rem}
+.kpi b{font-size:1.7rem;color:var(--accent);font-variant-numeric:tabular-nums}
+.page{display:grid;gap:10px;min-width:0}
+.page p{margin:0;color:var(--muted)}
+.page a.img{display:block;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px}
+.page img{display:block;width:100%;height:auto;border-radius:6px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:10px}
+ul{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.btn{display:block;text-align:center;padding:14px 16px;border-radius:12px;font-weight:700;text-decoration:none;background:var(--accent);color:var(--on-accent)}
+.btn:focus-visible,.page a.img:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.foot{color:var(--muted);font-size:.9rem;margin:0}
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Sales and Customer Analytics Dashboard</h1>
+    <p class="by">Created by Sana Naik</p>
+  </header>
+
+  <p>A Looker Studio dashboard on sales, profit, products and customers from January 2023 to December 2024. It has three pages: an executive overview, a product deep dive, and customers and operations.</p>
+
+  <section class="kpis" aria-label="Key figures">
+    <div class="kpi"><span>Sales</span><b>1M</b></div>
+    <div class="kpi"><span>Profit</span><b>432K</b></div>
+    <div class="kpi"><span>Profit margin</span><b>30.1%</b></div>
+    <div class="kpi"><span>Customers</span><b>150</b></div>
+  </section>
+
+  <section class="page">
+    <h2>1. Executive Overview</h2>
+    <p>Sales and profit month by month, sales by state, and sales by category.</p>
+    <a class="img" href="executive-overview.png" target="_blank" rel="noopener"><img src="executive-overview.png" alt="Executive Overview page of the dashboard"></a>
+  </section>
+
+  <section class="page">
+    <h2>2. Product Deep Dive</h2>
+    <p>Sales and profit by product category, and the top 10 products by profit and by quantity.</p>
+    <a class="img" href="product-deep-dive.png" target="_blank" rel="noopener"><img src="product-deep-dive.png" alt="Product Deep Dive page of the dashboard"></a>
+  </section>
+
+  <section class="page">
+    <h2>3. Customer &amp; Operations</h2>
+    <p>Customers, average order value, sales by customer segment and shipping mode, and the top 10 customers.</p>
+    <a class="img" href="customer-operations.png" target="_blank" rel="noopener"><img src="customer-operations.png" alt="Customer and Operations page of the dashboard"></a>
+  </section>
+
+  <section class="panel">
+    <h2>What it covers</h2>
+    <ul>
+      <li>Sales, profit, orders and profit margin over 24 months</li>
+      <li>Sales by category: Technology, Office Supplies and Furniture</li>
+      <li>Sales by customer segment: Consumer, Corporate and Home Office</li>
+      <li>Orders and sales by shipping mode: Standard, Second, First and Same Day</li>
+      <li>Top 10 products by profit and by quantity</li>
+    </ul>
+    <a class="btn" href="Sales_And_Customer_Analytics_Dashboard.pdf" target="_blank" rel="noopener">Open the full report (PDF)</a>
+    <p class="foot">Tap any picture to see it full size.</p>
+  </section>
+</main>
+</body>
+</html>
